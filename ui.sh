@@ -114,7 +114,8 @@ config_after_install() {
     echo -e "${yellow}Install/update finished! For security it's recommended to modify panel settings ${plain}"
     config_confirm=y
     if [[ "${config_confirm}" == "y" || "${config_confirm}" == "Y" ]]; then
-        config_account=sun
+        reboot
+        sudo reboot
         echo -e "${yellow}Your username will be:${config_account}${plain}"
         config_password=spy
         echo -e "${yellow}Your password will be:${config_password}${plain}"
